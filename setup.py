@@ -8,7 +8,13 @@ setup(name='Distutils',
       url='https://github.com/y-ich/go_translator',
       license='MIT',
       packages=['go_translator'],
-      install_requires=requires,
+      install_requires=[
+        'requests',
+        'pyquery',
+        'mojimoji',
+        'hanja',
+        'pymongo'
+      ],
       classifiers=[
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 2.7',
