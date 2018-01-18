@@ -5,10 +5,10 @@ import re
 import traceback
 import mojimoji
 import hanja as H
-from kanconvit import ja2zh
-import excite as web
+from .kanconvit import ja2zh
+import .excite as web
 # import google_cloud_translate as web
-from mongo import setup_mongo
+from .mongo import setup_mongo
 
 try:
     chr = unichr
