@@ -1,6 +1,6 @@
 from distutils.core import setup
 
-setup(name='Distutils',
+setup(name='go_translator',
       version='0.0.1',
       description='Machine Translation for Go',
       author='ICHIKAWA, Yuji',
