@@ -41,6 +41,15 @@ class GoTranslator:
         if no_db:
             client.close()
 
+    def load_dic(self):
+        client, db = setup_mongo(os.getenv('MIMIAKA_MONGO_URL'))
+        dic = db.constants.find_one({'category': 'translation'})
+        self.CHINESE_DICTIONARY = dic['chinese']
+        self.KOREAN_DICTIONARY = dic['korean']
+        self.POST_DICTIONARY = dic['post']
+        self.PLAYERS = list(db.players.find())
+        client.close()
+
     def chinese2symbols(self, text):
         table = {}
         symbol = "A"
