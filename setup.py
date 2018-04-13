@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(name='go_translator',
-      version='0.0.1',
+      version='0.0.2',
       description='Machine Translation for Go',
       author='ICHIKAWA, Yuji',
       author_email='ichikawa.yuji@gmail.com',
@@ -13,7 +13,8 @@ setup(name='go_translator',
         'pyquery',
         'mojimoji',
         'hanja',
-        'pymongo'
+        'pymongo',
+        'dnspython'
       ],
       classifiers=[
         'Programming Language :: Python :: 3',

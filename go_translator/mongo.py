@@ -12,9 +12,6 @@ def setup_mongo(url):
     try:
         client = MongoClient(url)
         db = client[db_name]
-        if '@' in url:
-            user, password = parsed.netloc.split('@')[0].split(':')
-            db.authenticate(user, password)
         return (client, db)
     except:
         return None
