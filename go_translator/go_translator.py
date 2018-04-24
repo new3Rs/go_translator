@@ -60,6 +60,8 @@ class GoTranslator:
             else:
                 name = player["mamumamuName"]
             ch_name = ja2zh(name)
+            if name == "金成龍":
+                print(name, ch_name)
             if ch_name != "" and ch_name in text:
                 text = text.replace(
                     ch_name,
