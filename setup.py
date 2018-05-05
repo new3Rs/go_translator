@@ -13,8 +13,7 @@ setup(name='go_translator',
         'pyquery',
         'mojimoji',
         'hanja',
-        'pymongo',
-        'dnspython'
+        'pymongo[srv]'
       ],
       classifiers=[
         'Programming Language :: Python :: 3',
