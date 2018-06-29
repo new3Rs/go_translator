@@ -143,7 +143,7 @@ class GoTranslator:
             else:
                 raise NotImplementedError()
             for pre, post in self.POST_DICTIONARY.items():
-                text = text.replace(pre, post)
+                text = re.sub(pre, post, text)
             return text
         except:
             print('translate failed', text.encode('utf-8'))
