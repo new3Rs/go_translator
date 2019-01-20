@@ -68,7 +68,7 @@ class GoTranslator:
                 table[symbol] = name
                 symbol = chr(ord(symbol) + 1)
 
-        for zh, ja in self.CHINESE_DICTIONARY.items():
+        for zh, ja in sorted(self.CHINESE_DICTIONARY.items(), key=lambda e: -len(e[0])):
             if zh in text:
                 text = text.replace(
                     zh,
@@ -99,7 +99,7 @@ class GoTranslator:
                 )
                 table[symbol] = hanja
                 symbol = chr(ord(symbol) + 1)
-        for ko, ja in self.KOREAN_DICTIONARY.items():
+        for ko, ja in sorted(self.KOREAN_DICTIONARY.items(), key=lambda e: -len(e[0])):
             if ko in text:
                 text = text.replace(
                     ko,
@@ -142,7 +142,7 @@ class GoTranslator:
                 text = self.translate_korean(text)
             else:
                 raise NotImplementedError()
-            for pre, post in self.POST_DICTIONARY.items():
+            for pre, post in sorted(self.POST_DICTIONARY.items(), key=lambda e: -len(e[0])):
                 text = re.sub(pre, post, text)
             return text
         except:
