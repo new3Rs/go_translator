@@ -12,7 +12,7 @@ setup(name='go_translator',
         'requests',
         'pyquery',
         'mojimoji',
-        'hanja',
+        'hanja==0.11.0',
         'pymongo[srv]'
       ],
       classifiers=[
